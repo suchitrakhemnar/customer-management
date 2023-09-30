@@ -1,28 +1,15 @@
-package com.sk.cutomermanagement.entity;
+package com.sk.cutomermanagement.dto;
 
-import jakarta.persistence.*;
-
-@Entity
-@Table(name = "customer")
-public class Customer {
-    @Id
-    @Column(name = "cus_id", length = 20)
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class CustomerDto {
     private int userId;
-
-    @Column(name = "cus_name", length = 255)
     private String userName;
-
-    @Column(name = "cus_email", length = 255)
     private String email;
-
-    @Column(name = "cus_password", length = 255)
     private String password;
 
-    public Customer() {
+    public CustomerDto() {
     }
 
-    public Customer(int userId, String userName, String email, String password) {
+    public CustomerDto(int userId, String userName, String email, String password) {
         this.userId = userId;
         this.userName = userName;
         this.email = email;
@@ -63,7 +50,7 @@ public class Customer {
 
     @Override
     public String toString() {
-        return "Customer{" +
+        return "CustomerDto{" +
                 "userId=" + userId +
                 ", userName='" + userName + '\'' +
                 ", email='" + email + '\'' +
