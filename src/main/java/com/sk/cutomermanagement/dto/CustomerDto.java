@@ -1,35 +1,35 @@
 package com.sk.cutomermanagement.dto;
 
 public class CustomerDto {
-    private int userId;
-    private String userName;
+    private int customerId;
+    private String customerName;
     private String email;
     private String password;
 
     public CustomerDto() {
     }
 
-    public CustomerDto(int userId, String userName, String email, String password) {
-        this.userId = userId;
-        this.userName = userName;
+    public CustomerDto(int customerId, String customerName, String email, String password) {
+        this.customerId = customerId;
+        this.customerName = customerName;
         this.email = email;
         this.password = password;
     }
 
-    public int getUserId() {
-        return userId;
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getCustomerName() {
+        return customerName;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 
     public String getEmail() {
@@ -51,8 +51,8 @@ public class CustomerDto {
     @Override
     public String toString() {
         return "CustomerDto{" +
-                "userId=" + userId +
-                ", userName='" + userName + '\'' +
+                "customerId=" + customerId +
+                ", customerName='" + customerName + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 '}';

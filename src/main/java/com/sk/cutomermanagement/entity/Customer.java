@@ -8,10 +8,10 @@ public class Customer {
     @Id
     @Column(name = "cus_id", length = 20)
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int userId;
+    private int customerId;
 
     @Column(name = "cus_name", length = 255)
-    private String userName;
+    private String customerName;
 
     @Column(name = "cus_email", length = 255)
     private String email;
@@ -23,26 +23,26 @@ public class Customer {
     }
 
     public Customer(int userId, String userName, String email, String password) {
-        this.userId = userId;
-        this.userName = userName;
+        this.customerId = userId;
+        this.customerName = userName;
         this.email = email;
         this.password = password;
     }
 
     public int getUserId() {
-        return userId;
+        return customerId;
     }
 
     public void setUserId(int userId) {
-        this.userId = userId;
+        this.customerId = userId;
     }
 
     public String getUserName() {
-        return userName;
+        return customerName;
     }
 
     public void setUserName(String userName) {
-        this.userName = userName;
+        this.customerName = userName;
     }
 
     public String getEmail() {
@@ -64,8 +64,8 @@ public class Customer {
     @Override
     public String toString() {
         return "Customer{" +
-                "userId=" + userId +
-                ", userName='" + userName + '\'' +
+                "customerId=" + customerId +
+                ", customerName='" + customerName + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 '}';
